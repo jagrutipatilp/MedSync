@@ -1,0 +1,609 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+   
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>MedSync</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href=" {% static  'assets/img/lg.png' %}" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href=" {% static  'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i'%}" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href=" {% static  ' assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href=" {% static  'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href=" {% static  'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href=" {% static  'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href=" {% static  'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href=" {% static  'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href=" {% static  'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+
+
+  <style>
+    @keyframes dropText {
+        0% {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        25% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        75% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+    }
+    img {
+      border-radius: 10%;
+    }
+    #health-tip {
+        animation: dropText 5.65s infinite;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var tips = [
+            {% for tip in tips %}
+            {
+                'heading': '{{ tip.heading }}',
+                'description': '{{ tip.description }}',
+                'image': '{{ tip.image }}'
+            },
+            {% endfor %}
+        ];
+        var interval = {{ interval }} * 1000;
+        var tipIndex = 0;
+        
+        function displayNextTip() {
+            if (tipIndex >= tips.length) {
+                tipIndex = 0;
+            }
+            
+            var currentTip = tips[tipIndex];
+            $('#tip-heading').text(currentTip.heading);
+            $('#tip-description').text(currentTip.description);
+            $('#tip-image').attr('src', currentTip.image);
+            
+            tipIndex++;
+            setTimeout(function() {
+                displayNextTip();
+            }, interval);
+        }
+        
+        displayNextTip();
+    });
+</script>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+        
+      <div class="logo' %}">
+        <h1><a href=" {% static  'index' %}">Med-Sync</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <a href=" {% static  'index' %}"></a>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="{% url 'home' %}">Home</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'about_page.html' %}">About</a></li>
+
+          
+          <li><a class="nav-link scrollto" href=" {% url  'newsevents.html' %}">News & events</a></li>
+          <li><a class="nav-link scrollto " href=" {% url  'remedies.html' %}">Remedies</a></li>
+          <li><a class="nav-link scrollto" href=" {% url  'contactus.html' %}">Contact</a></li>
+          <li><a class="getstarted scrollto" href=" {% url  'login.html' %}">Get Started</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    
+    <div class="container" id="health-tip">
+      <div class="row">
+        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up" id="tip-heading"></h1>
+          <h2 data-aos="fade-up" id="tip-description" data-aos-delay="400"></h2>
+          <div data-aos="fade-up" data-aos-delay="800">
+            <a href=" {% static  '#about'%}" class="btn-get-started scrollto">Read More</a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left" data-aos-delay="200">
+          <img href="" id="tip-image"  class="img-fluid animated" >
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients clients">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="" data-aos="zoom-in">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="200">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="300">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="400">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="500">
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Clients Section -->
+
+   <!-- ======= Pricing Section ======= -->
+   <section id="pricing" class="pricing">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Our Stories</h2>
+      </div>
+
+      <div class="row" padding="5">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="box" data-aos="zoom-in-right" data-aos-delay="200">
+            <h6 >27 February 2023</h6>
+            <h5 style="color:DodgerBlue;">How Myanmar achieved the 2020 milestone of reducing TB disease burden</h5>
+            <img src="https://www.who.int/images/default-source/searo---images/featurestory/reducing-tb-disease-burden---myanmar/tb-prevent-treatment-(tpt)-provision-by-sun-quality-health-gp-of-popservicesintl.jpg?sfvrsn=63d82b6c_3" width="300" height="300" class="img-fluid" border-radius="50%"></img>
+              
+            <ul>
+              <br>
+              <li>20% reduction of TB incidence from the 2015 baseline. </li>
+              <li>Collaboration of the public and private sectors has played an important role. </li>
+              <li>An increase in government spending on TB and making treatment affordable   </li>
+              
+            </ul>
+            <div class="btn-wrap">
+              <a href=" https://www.who.int/southeastasia/news/feature-stories/detail/how-myanmar-achieved-the-2020-milestone-of-reducing-TB-disease-burden" class="btn-buy">Read more</a>
+            </div>
+          </div>
+        </div>
+<!--<h3>{{ item.heading }} How Myanmar achieved the 2020 milestone of reducing TB disease burden</h3>
+            <h4>{{ item.timestamp }} </h4>
+            <ul>
+              <img src="{{ item.image_url }}" alt="Image">
+              <a href="{{ item.link }}">Read More</a>
+              <li>Myanmar is the only country in the Region to achieve the 2020 deadline for the SDG target of 20% reduction of TB incidence from the 2015 baseline. </li>
+              <li>Collaboration of the public and private sectors has played an important role in the efforts to control TB. </li>
+              <li>An increase in government spending on TB, newer diagnostic tools, use of mobile clinics, and making treatment affordable are some of the key elements of Myanmar’s approach to combat TB  </li>
+            </ul>-->
+        <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
+          <div class="box recommended" data-aos="zoom-in" data-aos-delay="100">
+            <h6>13 February 2023</h6>
+            <h5 style="color:DodgerBlue;">Maldives: leading the way to sustainable environmental health</h5>
+            <img src="https://cdn.who.int/media/images/default-source/ihs/patient-safety/reporting-and-learning/training/maldives/maldives_tb.jpg?sfvrsn=76b50dde_6" width="300" height="400" class="img-fluid" border-radius="50%"></img>
+            
+            <ul>
+              <br> 
+              <li>Addressing environmental health and the factors affecting it </li>
+              <li>Making the health-care system climate-resilient and ecologically sustainable</li>
+              <li>Community awareness and involvement is one of the key aspects</li>
+            </ul>
+            <div class="btn-wrap">
+              <a href="https://www.who.int/images/default-source/searo---images/countries/dprk/6.png?sfvrsn=48a2157c_5" class="btn-buy">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+          <div class="box" data-aos="zoom-in-left" data-aos-delay="200">
+            <h6>30 January 2023</h6>
+            <h5 style="color:DodgerBlue;">Integrating Traditional Medicine in Health Care</h5>
+            <img src="https://www.who.int/images/default-source/searo---images/countries/dprk/6.png?sfvrsn=48a2157c_5" width="300" height="300" class="img-fluid" border-radius="50%"></img>
+             
+            <ul>
+              <br>
+              <li>Almost 70% of the people use Koryo traditional medicine at the PHC level in DPR Korea</li>
+              <li>Koryo traditional medicine along with allopathic medicines are fully integrated into every level of the health system</li>
+              <li>All medical practitioners in DPR Korea are trained and qualified to practice</li>
+            </ul>
+            <div class="btn-wrap">
+              <a href=" {% static  '#' %}" class="btn-buy">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Pricing Section -->
+
+
+   
+
+    
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>Featured</h2>
+        </div>
+        
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Living a healthy life is crucial for overall well-being and longevity. It involves adopting positive habits that nourish the body and mind. Prioritizing regular exercise, maintaining a balanced diet with plenty of fruits and vegetables, staying hydrated, and getting enough sleep are essential. Managing stress, practicing mindfulness, and fostering healthy relationships contribute to mental well-being. Avoiding harmful substances like tobacco and excessive alcohol, along with regular health check-ups, ensure preventive care. Making these choices promotes physical fitness, boosts energy levels, enhances mental clarity, and ultimately leads to a fulfilling and vibrant life.                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+       
+
+           
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+
+    <!-- ======= Knowledge Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <div class="section-title">
+          <h2>Knowledge Is The Key To Wellness</h2>
+        </div>
+        
+       
+
+        <div class="row" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">Excercises</li>
+              <li data-filter=".filter-card">Food</li>
+              <li data-filter=".filter-web">Environment</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{% static  'assets/img/postall/a.png' %}" class="img-fluid" alt="">
+              <!--  <div class="portfolio-info">
+              <h4>App 1</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href=" {% static  'assets/img/portfolio/a.png' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                  <a href=" {% static  'portfolio-details' %}" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>--> 
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="{% static  'assets/img/postall/b.png' %}" class="img-fluid" alt="">
+              <!--  <div class="portfolio-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href=" {% static  'assets/img/portfolio/portfolio-2.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href=" {% static  'portfolio-details' %}" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>--> 
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{% static  'assets/img/postall/c.png' %}" class="img-fluid" alt="">
+              <!--  <div class="portfolio-info">
+                <h4>App 2</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href=" {% static  'assets/img/portfolio/portfolio-3.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                  <a href=" {% static  'portfolio-details' %}" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>--> 
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{% static  'assets/img/postall/d.png' %}" class="img-fluid" alt="">
+              <!--  <div class="portfolio-info">
+                <h4>Card 2</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href=" {% static  'assets/img/portfolio/portfolio-4.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                  <a href=" {% static  'portfolio-details' %}" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>--> 
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="{% static  'assets/img/postall/e.png' %}" class="img-fluid" alt="">
+              <!--  <div class="portfolio-info">
+                <h4>Web 2</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href=" {% static  'assets/img/portfolio/portfolio-5.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                  <a href=" {% static  'portfolio-details' %}" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>--> 
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{% static  'assets/img/postall/f.png' %}" class="img-fluid" alt="">
+              <!--  <div class="portfolio-info">
+                <h4>App 3</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href=" {% static  'assets/img/portfolio/portfolio-6.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
+                  <a href=" {% static  'portfolio-details' %}" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>--> 
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{% static  'assets/img/postall/g.png' %}" class="img-fluid" alt="">
+              <!--  <div class="portfolio-info">
+                <h4>Card 1</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href=" {% static  'assets/img/portfolio/portfolio-7.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                  <a href=" {% static  'portfolio-details' %}" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>--> 
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{% static  'assets/img/postall/h.png' %}" class="img-fluid" alt="">
+              <!--  <img src="{% static  'assets/img/portfolio/portfolio-8.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 3</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href=" {% static  'assets/img/portfolio/portfolio-8.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
+                  <a href=" {% static  'portfolio-details' %}" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>--> 
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="{% static  'assets/img/postall/i.png' %}" class="img-fluid" alt="">
+              <!--  <img src="{% static  'assets/img/portfolio/portfolio-9.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href=" {% static  'assets/img/portfolio/portfolio-9.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href=" {% static  'portfolio-details' %}" title="More Details"><i class="bx bx-link"></i></a>
+                </div>--> 
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Blogs</h2>
+          <p>Stay informed and improve your overall well-being</p>
+        </div>
+
+        <div class="column">
+
+          <div class=" align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              
+              <div class="member-info">
+                <h4>Amar Rokade</h4>
+                <span>The adoption of technology has grown rapidly among older adults, and with it have come potential benefits to mental health, daily functioning, and quality of life. Those who want to help an older person in their life might suggest one of the many options available.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class=" align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="200">
+              <!--<div class="member-img">
+                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                 <div class="social">
+                  <a href=" "><i class="bi bi-twitter"></i></a>
+                  <a href=" "><i class="bi bi-facebook"></i></a>
+                  <a href=" "><i class="bi bi-instagram"></i></a>
+                  <a href=" "><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div> -->
+              <div class="member-info">
+                <h4>Sarah Jhonson</h4>
+                <span>Fit Foodie Finds is a wellness blog tailor-made for serial Instagram scrollers. The gorgeous photos of healthy meals are just as exciting as making them. Who knew oats could look so pretty? Healthy living posts primarily focus on recipes, but they also include workouts (booty, legs, you name it), do-it-yourself (DIY) beauty, mental health, and relationships. Style-conscious readers will love it, too, with its gallery after gallery of fashion articles.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class=" align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="300">
+             <!-- <div class="member-img">
+                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=" "><i class="bi bi-twitter"></i></a>
+                  <a href=" "><i class="bi bi-facebook"></i></a>
+                  <a href=" "><i class="bi bi-instagram"></i></a>
+                  <a href=" "><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div> -->
+              <div class="member-info">
+                <h4>William Anderson</h4>
+                <span>Blogger Toby is a registered dietitian and author who helps home cooks up their game with the latest in nutrition and food news, including ingredient recalls and safety tips. Toby helps you see your kitchen in an exciting new way and reignite your love of cuisine and cooking. There’s a heavy focus on creative meal prep, along with more serious articles on things like foods to fight depression.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class=" align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="400">
+              
+              <div class="member-info">
+                <h4>Amanda Jepson</h4>
+                <span>This blog will resonate with anyone looking for friend-to-friend advice from someone who’s built a career around motivating people — blogger Julie is a personal trainer. She puts on her motivational hat to pen posts ranging in topic from beauty routines she swears by to floor exercises that make you feel the burn. Be sure to check out the recipe index and workout feeds.</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+    
+
+    
+
+    
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <div class="col-lg-6 text-lg-left text-center">
+          <div class="copyright">
+            &copy; Copyright <strong>Vesperr</strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/vesperr-free-bootstrap-template/ -->
+            Designed by <a href=" {% static  'https://bootstrapmade.com/' %}">BootstrapMade</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+            <a href=" {% static  '#intro' %}" class="scrollto">Home</a>
+            <a href=" {% static  '#about' %}"class="scrollto">About</a>
+            <a href=" {% static  '#' %}">Privacy Policy</a>
+            <a href=" {% static  '#' %}">Terms of Use</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href=" {% static  '#' %}" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+<script>
+    (function() {
+      var tbodies = document.querySelectorAll('tbody[data-api-type][data-api-lang]'), t=0;
+      function getContent () {
+        var tbody = tbodies[t];
+        var xhr = new XMLHttpRequest();
+        var url="/myhealthfinder/api/v3/itemlist.json";
+        url += "?type=" + tbody.dataset.apiType;
+        url += "&lang=" + tbody.dataset.apiLang;
+        xhr.open("GET", url);
+        xhr.send();
+        xhr.onload = function() {
+          var tr, td;
+          var response = JSON.parse(xhr.response);
+          if (++t < tbodies.length) getContent();
+          response.Result.Items.Item.forEach(function(item) {
+            tr = document.createElement("tr");
+            td = document.createElement("td");
+            td.innerHTML = item.Id;
+            tr.appendChild(td);
+            td = document.createElement("td");
+            td.innerHTML = item.Title;
+            tr.appendChild(td);
+            tbody.appendChild(tr);
+          });
+        };
+      };
+      if (tbodies.length > 0) getContent();
+    })();
+  </script>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

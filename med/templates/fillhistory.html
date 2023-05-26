@@ -1,0 +1,530 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+   
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Vesperr Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href=" {% static  'assets/img/lg.png' %}" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href=" {% static  'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href=" {% static  ' assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href=" {% static  'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href=" {% static  'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href=" {% static  'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href=" {% static  'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href=" {% static  'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href=" {% static  'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+  <style type="text/css" id="form-designer-style">
+    /* Injected CSS Code */
+/*PREFERENCES STYLE*/
+      /* NEW THEME STYLE */
+      .supernova {
+        background-color: #2462B9;
+      }
+      .form-all {
+        margin-top: 72px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 4px rgba(17, 24, 38, 0.21)
+      }
+      .form-line-active {
+        background-color: #F1F5FF;
+      }
+      .form-line-error {
+        background-color: #FFEDED;
+      }
+      .form-line-error input:not(#coupon-input):not(.form-validation-error) {
+        border-color: #2462B9;
+      }
+      .form-label {
+        color: #102D80;
+      }
+      .form-sub-label {
+        color: #2462B9;
+      }
+      .form-dropdown,
+      .form-textarea,
+      .form-textbox,
+      .form-checkbox + label:before, .form-radio + label:before,
+      .form-radio + span:before, .form-checkbox + span:before {
+        border-color: #2462B9;
+        background-color: #ffffff;
+        color: #2C3345;
+      }
+      .rating-item label {
+        border-color: #2462B9;
+        color: #102D80;
+        background-color: #ffffff;
+      }
+      .rating-item-title.for-to > label:first-child,
+      .rating-item-title.for-from > label:first-child {
+        background-color: transparent;
+        color: #2462B9;
+      }
+      .appointmentCalendarContainer .monthYearPicker .pickerItem+.pickerItem {
+        border-left-color: #2462B9;
+      }
+      .appointmentCalendarContainer {
+        background-color: #ffffff;
+        border-color: #2462B9;
+      }
+      .appointmentCalendarContainer .currentDate,
+      .appointmentCalendarContainer .pickerItem .pickerYear,
+      .appointmentCalendarContainer .pickerItem .pickerMonth
+      {
+        color: #102D80;
+      }
+      .appointmentCalendar .calendarDay {
+        color: #102D80;
+    }
+      .appointmentCalendarContainer .monthYearPicker{
+        border-color: #2462B9;
+      }
+      .rating-item input:focus+label, .rating-item input:hover+label {
+        color: #102D80;
+      }
+      .appointmentCalendar .calendarDay.isUnavailable,
+      ::placeholder {
+        color: #C8D7ED;
+      }
+      .form-spinner-button-container > *,
+      .appointmentDayPickerButton,
+      .form-matrix-column-headers, .form-matrix-row-headers {
+        background-color: #C8D7ED;
+      }
+      .appointmentCalendar .dayOfWeek {
+        background-color: #C8D7ED;
+        color: #102D80;
+      }
+      .form-matrix-values {
+        background-color: #F9FBFF;
+      }
+      .rating-item input:focus+label, .rating-item input:hover+label {
+        color: #2462B9;
+        background-color: #C8D7ED;
+        border-color: #2462B9;
+      }
+      .rating-item input:checked+label {
+        background-color: #2462B9;
+        border-color:#102D80;
+        color: #fff;
+      }
+      .form-checkbox + label, .form-radio + label :not(.rating-item){
+        color: #102D80;
+      }
+      .form-dropdown:hover, .form-textarea:hover, .form-textbox:hover, .form-checkbox:hover + label:before, .form-radio:hover + label:before {
+        border-color: #2E69FF;
+        box-shadow: 0 0 0 2px #C9D8FE;
+      }
+      .form-dropdown:focus, .form-textarea:focus, .form-textbox:focus, .form-checkbox:focus + label:before, .form-radio:focus + label:before {
+        border-color: #2E69FF;
+        box-shadow: 0 0 0 3px #C9D8FE;
+      }
+      .form-matrix-column-headers, .form-matrix-table td, .form-matrix-table td:last-child, .form-matrix-table th, .form-matrix-table th:last-child, .form-matrix-table tr:last-child td, .form-matrix-table tr:last-child th, .form-matrix-table tr:not([role=group])+tr[role=group] th,
+      .form-matrix-column-headers, .form-matrix-table td,
+      .form-matrix-table td:last-child, .form-matrix-table th,
+      .form-matrix-table th:last-child, .form-matrix-table tr:last-child td,
+      .form-matrix-table tr:last-child th,
+      .form-matrix-table tr:not([role=group])+tr[role=group] th
+      {
+        border-color: #2462B9;
+        color: #102D80;
+      }
+      .form-matrix-headers.form-matrix-column-headers,
+      .isSelected .form-matrix-column-headers:nth-last-of-type(2) {
+        border-color: #2462B9;
+      }
+      .form-radio:checked + label:after {
+        background-color: #2E69FF;
+      }
+      .form-checkbox:checked + label:before {
+        background-color: #2E69FF;
+        border-color: #102D80;
+      }
+      .form-radio:checked + label:before {
+        border-color: #102D80;
+      }
+      .form-header {
+        color: #102D80;
+      }
+      .jSignature, .signature-pad-passive {
+        border-color: #2462B9;
+      }
+      .form-header-group .form-subHeader {
+        color: #2C63B1;
+      }
+      .form-header-group {
+        border-color: #C8D7ED;
+      }
+      .header-large {
+        color: #C8D7ED;
+        border-color: #C8D7ED;
+      }
+      li[data-type="control_text"] .form-html {
+        color: #394258;
+      }
+      li[data-type="control_datetime"] .extended .allowTime-container + .form-sub-label-container {
+        background-color: #ffffff;
+      }
+      .submit-button {
+        background-color: #102D80;
+        border-color: #102D80;
+      }
+      .form-sacl-button, form-submit-print {
+        color: #2C3345;
+      }
+      .form-pagebreak-back {
+        background-color: #C8D7ED;
+        border-color: #C8D7ED;
+      }
+      .form-pagebreak-next {
+        background-color: undefined;
+      }
+      .form-pagebreak, .form-pagebreak > div {
+        border-color: #C8D7ED;
+      }
+      .form-buttons-wrapper, .form-pagebreak, .form-submit-clear-wrapper {
+        border-color: #C8D7ED;
+      }
+
+      /* NEW THEME STYLE */
+      /*PREFERENCES STYLE*/
+      /*PREFERENCES STYLE*/
+    .form-all {
+      font-family: Inter, sans-serif;
+    }
+    .form-all .qq-upload-button,
+    .form-all .form-submit-button,
+    .form-all .form-submit-reset,
+    .form-all .form-submit-print {
+      font-family: Inter, sans-serif;
+    }
+    .form-all .form-pagebreak-back-container,
+    .form-all .form-pagebreak-next-container {
+      font-family: Inter, sans-serif;
+    }
+    .form-header-group {
+      font-family: Inter, sans-serif;
+    }
+    .form-label {
+      font-family: Inter, sans-serif;
+    }
+  
+    
+  
+    .form-line {
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+  
+    .form-all {
+      max-width: 752px;
+      width: 100%;
+    }
+  
+    .form-label.form-label-left,
+    .form-label.form-label-right,
+    .form-label.form-label-left.form-label-auto,
+    .form-label.form-label-right.form-label-auto {
+      width: 230px;
+    }
+  
+    .form-all {
+      font-size: 16px
+    }
+    .form-all .qq-upload-button,
+    .form-all .qq-upload-button,
+    .form-all .form-submit-button,
+    .form-all .form-submit-reset,
+    .form-all .form-submit-print {
+      font-size: 16px
+    }
+    .form-all .form-pagebreak-back-container,
+    .form-all .form-pagebreak-next-container {
+      font-size: 16px
+    }
+  
+    .supernova {
+      background-color: #2462B9;
+    }
+    .supernova body {
+      background: transparent;
+    }
+  
+    .supernova .form-all, .form-all {
+      background-color: #ffffff;
+      border: 1px solid transparent;
+    }
+  .form-all {
+    color: #102D80;
+  }
+  .form-label-top,
+  .form-label-left,
+  .form-label-right,
+  .form-html,
+  .form-checkbox-item label,
+  .form-radio-item label {
+    color: #102D80;
+  }
+  
+    .form-textbox,
+    .form-textarea,
+    .form-radio-other-input,
+    .form-checkbox-other-input,
+    .form-captcha input,
+    .form-spinner input {
+      background-color: #ffffff;
+    }
+  
+    .form-line-error .form-error-message {
+      background-color: #FF3200;
+      clear: both;
+      float: none;
+    }
+    .form-line-error .form-error-arrow {
+      border-bottom-color: #FF3200;
+    }
+    .form-line-error input:not(#coupon-input),
+    .form-line-error textarea,
+    .form-line-error .form-validation-error {
+      border: 1px solid #FF3200;
+      .box-shadow(0 0 3px #FF3200);
+    }
+   
+    .supernova {
+      background-image: none;
+    }
+    #stage {
+      background-image: none;
+    }
+  
+    .form-all {
+      background-image: none;
+    }
+  
+  .ie-8 .form-all:before { display: none; }
+  .ie-8 {
+    margin-top: auto;
+    margin-top: initial;
+  }
+  
+  /*PREFERENCES STYLE*//*__INSPECT_SEPERATOR__*/
+.form-label.form-label-auto {
+        
+      display: block;
+      float: none;
+      text-align: left;
+      width: 100%;
+    
+      }
+    /* Injected CSS Code */
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="alternate" type="application/json+oembed" href="https://www.jotform.com/oembed/?format=json&amp;url=https%3A%2F%2Fform.jotform.com%2F231192117620446" title="oEmbed Form">
+<link rel="alternate" type="text/xml+oembed" href="https://www.jotform.com/oembed/?format=xml&amp;url=https%3A%2F%2Fform.jotform.com%2F231192117620446" title="oEmbed Form">
+<meta property="og:title" content="New Patient Appointment Form" >
+<meta property="og:url" content="https://form.jotform.com/231192117620446" >
+<meta property="og:description" content="Please click the link to complete this form." >
+<meta name="slack-app-id" content="AHNMASS8M">
+<meta property="og:image" content="https://cdn.jotfor.ms/assets/img/landing/opengraph.png" />
+<link rel="shortcut icon" href="https://cdn.jotfor.ms/assets/img/favicons/favicon-2021-light%402x.png">
+<script>
+          var favicon = document.querySelector('link[rel="shortcut icon"]');
+          window.isDarkMode = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if(favicon && window.isDarkMode) {
+              favicon.href = favicon.href.replaceAll('favicon-2021-light%402x.png', 'favicon-2021-dark%402x.png');
+          }
+      </script><link rel="canonical" href="https://form.jotform.com/231192117620446" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1" />
+<meta name="HandheldFriendly" content="true" />
+<title>New Patient Appointment Form</title>
+<style type="text/css">@media print{.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height:auto!important}.page-section{position:initial!important}}</style>
+<link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?v=3.3.41388&themeRevisionID=63e6805f64383509e31513f4"/>
+<link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/css/styles/payment/payment_styles.css?3.3.41388" />
+<link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/css/styles/payment/payment_feature.css?3.3.41388" />
+  <!-- =======================================================
+  * Template Name: Vesperr
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/vesperr-free-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo' %}">
+        <h1><a href=" {% static  'index' %}">Med-Sync</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href=" {% static  'index' %}"><img src="assets/img/logo.png' %}" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="{% url 'home' %}">Home</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'about_page.html' %}">About</a></li>
+
+          
+          <li><a class="nav-link scrollto" href=" {% url  'newsevents.html' %}">News & events</a></li>
+          <li><a class="nav-link scrollto " href=" {% url  'remedies.html' %}">Remedies</a></li>
+          <li><a class="nav-link scrollto" href=" {% url  'contactus.html' %}">Contact</a></li>
+          <li><a class="getstarted scrollto" href=" {% url  'login.html' %}">Log in</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main>
+    <form class="jotform-form" action="{% url 'success.html' %}" method="post" name="form_231192117620446" id="231192117620446" accept-charset="utf-8" autocomplete="on"><input type="hidden" name="formID" value="231192117620446" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" />
+      {% csrf_token %}
+      <div role="main" class="form-all">
+        <ul class="form-section page-section">
+          <li id="cid_1" class="form-input-wide" data-type="control_head">
+            <div class="form-header-group  header-large">
+              <div class="header-text httac htvam">
+                <h1 id="header_1" class="form-header" data-component="header">Health History Form</h1>
+              </div>
+            </div>
+          </li>
+          <li class="form-line" data-type="control_fullname" id="id_3"><label class="form-label form-label-top form-label-extended" id="label_3" for="first_3"> Name </label>
+            <div id="cid_3" class="form-input-wide" data-layout="full">
+              <div data-wrapper-react="true" class="extended"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first"><input type="text" id="first_3" name="q3_name[first]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_3 given-name" size="10" value="" data-component="first" aria-labelledby="label_3 sublabel_3_first" /><label class="form-sub-label" for="first_3" id="sublabel_3_first" style="min-height:13px" aria-hidden="false">First Name</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="middle"><input type="text" id="middle_3" name="q3_name[middle]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_3 additional-name" size="10" value="" data-component="middle" aria-labelledby="label_3 sublabel_3_middle" /><label class="form-sub-label" for="middle_3" id="sublabel_3_middle" style="min-height:13px" aria-hidden="false">Middle Name</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_3" name="q3_name[last]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_3 family-name" size="15" value="" data-component="last" aria-labelledby="label_3 sublabel_3_last" /><label class="form-sub-label" for="last_3" id="sublabel_3_last" style="min-height:13px" aria-hidden="false">Last Name</label></span></div>
+            </div>
+          </li>
+          <li class="form-line" data-type="control_checkbox" id="id_14"><label class="form-label form-label-top form-label-auto" id="label_14" for="input_14"> Gender </label>
+            <div id="cid_14" class="form-input-wide" data-layout="full">
+              <div class="form-multiple-column" data-columncount="3" role="group" aria-labelledby="label_14" data-component="checkbox"><span class="form-checkbox-item"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_14" class="form-checkbox" id="input_14_0" name="q14_gender[]" value="Male" /><label id="label_input_14_0" for="input_14_0">Male</label></span><span class="form-checkbox-item"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_14" class="form-checkbox" id="input_14_1" name="q14_gender[]" value="Female" /><label id="label_input_14_1" for="input_14_1">Female</label></span><span class="form-checkbox-item"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_14" class="form-checkbox" id="input_14_2" name="q14_gender[]" value="Transgender" /><label id="label_input_14_2" for="input_14_2">Transgender</label></span></div>
+            </div>
+          </li>
+          <li class="form-line form-line-column form-col-1" data-type="control_email" id="id_4"><label class="form-label form-label-top" id="label_4" for="input_4"> Email </label>
+            <div id="cid_4" class="form-input-wide" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top"><input type="email" id="input_4" name="q4_email" class="form-textbox validate[Email]" data-defaultvalue="" style="width:310px" size="310" value="" data-component="email" aria-labelledby="label_4 sublabel_input_4" /><label class="form-sub-label" for="input_4" id="sublabel_input_4" style="min-height:13px" aria-hidden="false">example@example.com</label></span> </div>
+          </li>
+          <li class="form-line form-line-column form-col-2" data-type="control_phone" id="id_5"><label class="form-label form-label-top" id="label_5" for="input_5_full"> Phone Number </label>
+            <div id="cid_5" class="form-input-wide" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top"><input type="tel" id="input_5_full" name="q5_phoneNumber[full]" data-type="mask-number" class="mask-phone-number form-textbox validate[Fill Mask]" data-defaultvalue="" autoComplete="section-input_5 tel-national" style="width:310px" data-masked="true" value="" placeholder="(000) 000-0000" data-component="phone" aria-labelledby="label_5" /></span> </div>
+          </li>
+          <li class="form-line form-line-column form-col-3" data-type="control_phone" id="id_16"><label class="form-label form-label-top" id="label_16" for="input_16_full"> Emergency Number </label>
+            <div id="cid_16" class="form-input-wide" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top"><input type="tel" id="input_16_full" name="q16_emergencyNumber[full]" data-type="mask-number" class="mask-phone-number form-textbox validate[Fill Mask]" data-defaultvalue="" autoComplete="section-input_16 tel-national" style="width:310px" data-masked="true" value="" placeholder="(000) 000-0000" data-component="phone" aria-labelledby="label_16" /></span> </div>
+          </li>
+          <li class="form-line" data-type="control_datetime" id="id_9"><label class="form-label form-label-top form-label-auto" id="label_9" for="lite_mode_9"> Birthday </label>
+            <div id="cid_9" class="form-input-wide" data-layout="half">
+              <div data-wrapper-react="true">
+                <div style="display:none"><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox validate[limitDate]" id="month_9" name="q9_birthday[month]" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="off" aria-labelledby="label_9 sublabel_9_month" /><span class="date-separate" aria-hidden="true"> -</span><label class="form-sub-label" for="month_9" id="sublabel_9_month" style="min-height:13px" aria-hidden="false">Month</label></span><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox validate[limitDate]" id="day_9" name="q9_birthday[day]" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="off" aria-labelledby="label_9 sublabel_9_day" /><span class="date-separate" aria-hidden="true"> -</span><label class="form-sub-label" for="day_9" id="sublabel_9_day" style="min-height:13px" aria-hidden="false">Day</label></span><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox validate[limitDate]" id="year_9" name="q9_birthday[year]" size="4" data-maxlength="4" data-age="" maxLength="4" value="" autoComplete="off" aria-labelledby="label_9 sublabel_9_year" /><label class="form-sub-label" for="year_9" id="sublabel_9_year" style="min-height:13px" aria-hidden="false">Year</label></span></div><span class="form-sub-label-container" style="vertical-align:top"><input type="text" class="form-textbox validate[limitDate, validateLiteDate]" id="lite_mode_9" size="12" data-maxlength="12" maxLength="12" data-age="" value="" data-format="mmddyyyy" data-seperator="-" placeholder="MM-DD-YYYY" autoComplete="off" aria-labelledby="label_9 sublabel_9_litemode" /><img class=" newDefaultTheme-dateIcon icon-liteMode" alt="Pick a Date" id="input_9_pick" src="https://cdn.jotfor.ms/images/calendar.png" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v2" /><label class="form-sub-label" for="lite_mode_9" id="sublabel_9_litemode" style="min-height:13px" aria-hidden="false">Date</label></span>
+              </div>
+            </div>
+          </li>
+          <li class="form-line" data-type="control_address" id="id_6" data-compound-hint=",,,,Please Select,,Please Select,"><label class="form-label form-label-top form-label-auto" id="label_6" for="input_6_addr_line1"> Address </label>
+            <div id="cid_6" class="form-input-wide" data-layout="full">
+              <div summary="" class="form-address-table jsTest-addressField">
+                <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_6_addr_line1" name="q6_address[addr_line1]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_6 address-line1" value="" data-component="address_line_1" aria-labelledby="label_6 sublabel_6_addr_line1" required="" /><label class="form-sub-label" for="input_6_addr_line1" id="sublabel_6_addr_line1" style="min-height:13px" aria-hidden="false">Street Address</label></span></span></div>
+                <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_6_addr_line2" name="q6_address[addr_line2]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_6 address-line2" value="" data-component="address_line_2" aria-labelledby="label_6 sublabel_6_addr_line2" /><label class="form-sub-label" for="input_6_addr_line2" id="sublabel_6_addr_line2" style="min-height:13px" aria-hidden="false">Street Address Line 2</label></span></span></div>
+                <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-city-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_6_city" name="q6_address[city]" class="form-textbox form-address-city" data-defaultvalue="" autoComplete="section-input_6 address-level2" value="" data-component="city" aria-labelledby="label_6 sublabel_6_city" required="" /><label class="form-sub-label" for="input_6_city" id="sublabel_6_city" style="min-height:13px" aria-hidden="false">City</label></span></span><span class="form-address-line form-address-state-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_6_state" name="q6_address[state]" class="form-textbox form-address-state" data-defaultvalue="" autoComplete="section-input_6 address-level1" value="" data-component="state" aria-labelledby="label_6 sublabel_6_state" required="" /><label class="form-sub-label" for="input_6_state" id="sublabel_6_state" style="min-height:13px" aria-hidden="false">State / Province</label></span></span></div>
+                <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-zip-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_6_postal" name="q6_address[postal]" class="form-textbox form-address-postal" data-defaultvalue="" autoComplete="section-input_6 postal-code" value="" data-component="zip" aria-labelledby="label_6 sublabel_6_postal" required="" /><label class="form-sub-label" for="input_6_postal" id="sublabel_6_postal" style="min-height:13px" aria-hidden="false">Postal / Zip Code</label></span></span></div>
+              </div>
+            </div>
+          </li>
+          <li class="form-line" data-type="control_radio" id="id_7"><label class="form-label form-label-top form-label-auto" id="label_7" for="input_7"> Contact Preference </label>
+            <div id="cid_7" class="form-input-wide" data-layout="full">
+              <div class="form-multiple-column" data-columncount="2" role="group" aria-labelledby="label_7" data-component="radio"><span class="form-radio-item"><span class="dragger-item"></span><input type="radio" aria-describedby="label_7" class="form-radio" id="input_7_0" name="q7_contactPreference" value="Via Email" /><label id="label_input_7_0" for="input_7_0">Via Email</label></span><span class="form-radio-item"><span class="dragger-item"></span><input type="radio" aria-describedby="label_7" class="form-radio" id="input_7_1" name="q7_contactPreference" value="Via Phone" /><label id="label_input_7_1" for="input_7_1">Via Phone</label></span></div>
+            </div>
+          </li>
+          <li class="form-line" data-type="control_radio" id="id_10"><label class="form-label form-label-top form-label-auto" id="label_10" for="input_10"> Please check of if you have any problems with or are presently experiancing any? </label>
+            <div id="cid_10" class="form-input-wide" data-layout="full">
+              <div class="form-multiple-column" data-columncount="2" role="group" aria-labelledby="label_10" data-component="radio"><span class="form-radio-item"><span class="dragger-item"></span><input type="radio" aria-describedby="label_10" class="form-radio" id="input_10_0" name="q10_whichMedical10" value="Alzheimer&#x27;s disease" /><label id="label_input_10_0" for="input_10_0">Alzheimer's disease</label></span><span class="form-radio-item"><span class="dragger-item"></span><input type="radio" aria-describedby="label_10" class="form-radio" id="input_10_1" name="q10_whichMedical10" value="Anemia" /><label id="label_input_10_1" for="input_10_1">Anemia</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" aria-describedby="label_10" class="form-radio" id="input_10_2" name="q10_whichMedical10" value="Appendicitis" /><label id="label_input_10_2" for="input_10_2">Appendicitis</label></span><span class="form-radio-item"><span class="dragger-item"></span><input type="radio" aria-describedby="label_10" class="form-radio" id="input_10_3" name="q10_whichMedical10" value="Astigmatism" /><label id="label_input_10_3" for="input_10_3">Astigmatism</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" aria-describedby="label_10" class="form-radio" id="input_10_4" name="q10_whichMedical10" value="Atherosclerosis" /><label id="label_input_10_4" for="input_10_4">Atherosclerosis</label></span><span class="form-radio-item"><span class="dragger-item"></span><input type="radio" aria-describedby="label_10" class="form-radio" id="input_10_5" name="q10_whichMedical10" value="Bronchitis" /><label id="label_input_10_5" for="input_10_5">Bronchitis</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" aria-describedby="label_10" class="form-radio" id="input_10_6" name="q10_whichMedical10" value="Celiac disease" /><label id="label_input_10_6" for="input_10_6">Celiac disease</label></span><span class="form-radio-item"><span class="dragger-item"></span><input type="radio" aria-describedby="label_10" class="form-radio" id="input_10_7" name="q10_whichMedical10" value="Chickenpox" /><label id="label_input_10_7" for="input_10_7">Chickenpox</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" aria-describedby="label_10" class="form-radio" id="input_10_8" name="q10_whichMedical10" value="Chronic fatigue syndrome" /><label id="label_input_10_8" for="input_10_8">Chronic fatigue syndrome</label></span><span class="form-radio-item"><span class="dragger-item"></span><input type="radio" aria-describedby="label_10" class="form-radio" id="input_10_9" name="q10_whichMedical10" value="Cirrhosis" /><label id="label_input_10_9" for="input_10_9">Cirrhosis</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" aria-describedby="label_10" class="form-radio" id="input_10_10" name="q10_whichMedical10" value="Colitis" /><label id="label_input_10_10" for="input_10_10">Colitis</label></span><span class="form-radio-item"><span class="dragger-item"></span><input type="radio" aria-describedby="label_10" class="form-radio" id="input_10_11" name="q10_whichMedical10" value="Congestive heart failure" /><label id="label_input_10_11" for="input_10_11">Congestive heart failure</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input type="radio" aria-describedby="label_10" class="form-radio" id="input_10_12" name="q10_whichMedical10" value="Crohn&#x27;s disease" /><label id="label_input_10_12" for="input_10_12">Crohn's disease</label></span><span class="form-radio-item"><span class="dragger-item"></span><input type="radio" aria-describedby="label_10" class="form-radio" id="input_10_13" name="q10_whichMedical10" value="Cystic fibrosis" /><label id="label_input_10_13" for="input_10_13">Cystic fibrosis</label></span><span class="form-radio-item formRadioOther"><input type="radio" class="form-radio-other form-radio" name="q10_whichMedical10" id="other_10" value="other" tabindex="0" aria-label="Please specify" /><label id="label_other_10" style="text-indent:0" for="other_10">Please specify</label><span id="other_10_input" class="other-input-container" style="display:none"><input type="text" class="form-radio-other-input form-textbox" name="q10_whichMedical10[other]" data-otherhint="Please specify" size="15" id="input_10" data-placeholder="Please type another option here" placeholder="Please type another option here" /></span></span></div>
+            </div>
+          </li>
+          <li class="form-line" data-type="control_textarea" id="id_13"><label class="form-label form-label-top form-label-auto" id="label_13" for="input_13"> Please explain your medical history briefly. </label>
+            <div id="cid_13" class="form-input-wide" data-layout="full"> <span class="form-sub-label-container" style="vertical-align:top"><textarea id="input_13" class="form-textarea" name="q13_pleaseExplain" style="width:648px;height:163px" data-component="textarea" aria-labelledby="label_13 sublabel_input_13"></textarea><label class="form-sub-label" for="input_13" id="sublabel_input_13" style="min-height:13px" aria-hidden="false">Diagnosis/ Medicine Taken/ Still Using or Not</label></span> </div>
+          </li>
+          <li class="form-line" data-type="control_address" id="id_20" data-compound-hint=",,,,Please Select,,Please Select,"><label class="form-label form-label-top form-label-auto" id="label_20" for="input_20_addr_line1"> Gynecology and obstetrics history </label>
+            <div id="cid_20" class="form-input-wide" data-layout="full">
+              <div summary="" class="form-address-table jsTest-addressField">
+                <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_20_addr_line1" name="q20_gynecologyAnd[addr_line1]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_20 address-line1" value="" data-component="address_line_1" aria-labelledby="label_20 sublabel_20_addr_line1" required="" /><label class="form-sub-label" for="input_20_addr_line1" id="sublabel_20_addr_line1" style="min-height:13px" aria-hidden="false">Age at onset on periods</label></span></span></div>
+                <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_20_addr_line2" name="q20_gynecologyAnd[addr_line2]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_20 address-line2" value="" data-component="address_line_2" aria-labelledby="label_20 sublabel_20_addr_line2" /><label class="form-sub-label" for="input_20_addr_line2" id="sublabel_20_addr_line2" style="min-height:13px" aria-hidden="false">Street Address Line 2</label></span></span></div>
+                <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-city-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_20_city" name="q20_gynecologyAnd[city]" class="form-textbox form-address-city" data-defaultvalue="" autoComplete="section-input_20 address-level2" value="" data-component="city" aria-labelledby="label_20 sublabel_20_city" required="" /><label class="form-sub-label" for="input_20_city" id="sublabel_20_city" style="min-height:13px" aria-hidden="false">City</label></span></span><span class="form-address-line form-address-state-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_20_state" name="q20_gynecologyAnd[state]" class="form-textbox form-address-state" data-defaultvalue="" autoComplete="section-input_20 address-level1" value="" data-component="state" aria-labelledby="label_20 sublabel_20_state" required="" /><label class="form-sub-label" for="input_20_state" id="sublabel_20_state" style="min-height:13px" aria-hidden="false">State / Province</label></span></span></div>
+                <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-zip-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_20_postal" name="q20_gynecologyAnd[postal]" class="form-textbox form-address-postal" data-defaultvalue="" autoComplete="section-input_20 postal-code" value="" data-component="zip" aria-labelledby="label_20 sublabel_20_postal" required="" /><label class="form-sub-label" for="input_20_postal" id="sublabel_20_postal" style="min-height:13px" aria-hidden="false">Postal / Zip Code</label></span></span></div>
+              </div>
+            </div>
+          </li>
+          <li class="form-line" data-type="control_button" id="id_2">
+            <div id="cid_2" class="form-input-wide" data-layout="full">
+              <div data-align="center" class="form-buttons-wrapper form-buttons-center   jsTest-button-wrapperField"><button id="input_2" type="submit" class="form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">Submit</button></div>
+            </div>
+          </li>
+          <li style="display:none">Should be Empty: <input type="text" name="website" value="" /></li>
+        </ul>
+      </div>
+     
+     
+    </form>
+            
+      
+     
+   
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <div class="col-lg-6 text-lg-left text-center">
+          <div class="copyright">
+            &copy; Copyright <strong>Med-Sync</strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/vesperr-free-bootstrap-template/ -->
+            Designed by <a href=" https://www.linkedin.com/in/jagruti-patil-b27488216/">JagStudio</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+            <a href=" {% url  'home' %}" class="scrollto">Home</a>
+            <a href=" {% url 'about_page.html' %}"class="scrollto">About</a>
+            <a href="  {% url 'privacy_policy.html' %}">Privacy Policy</a>
+            <a href="  {% url 'termsofuse.html' %}">Terms of Use</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href=" {% static  '#' %}" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

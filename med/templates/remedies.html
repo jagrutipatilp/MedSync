@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+   
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Vesperr Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href=" {% static  'assets/img/lg.png' %}" rel="icon">
+  <!-- Google Fonts -->
+  <link href=" {% static  'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i'%}" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href=" {% static  ' assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href=" {% static  'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href=" {% static  'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href=" {% static  'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href=" {% static  'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href=" {% static  'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href=" {% static  'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+
+  <!-- =======================================================
+  * Template Name: Vesperr
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/vesperr-free-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo' %}">
+        <h1><a href=" {% static  'index' %}">Med-Sync</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href=" {% static  'index' %}"><img src="assets/img/logo.png' %}" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="{% url 'home' %}">Home</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'about_page.html' %}">About</a></li>
+
+          
+          <li><a class="nav-link scrollto" href=" {% url  'newsevents.html' %}">News & events</a></li>
+          <li><a class="nav-link scrollto active " href=" {% url  'remedies.html' %}">Remedies</a></li>
+          <li><a class="nav-link scrollto" href=" {% url  'contactus.html' %}">Contact</a></li>
+          <li><a class="getstarted scrollto" href=" {% url  'login.html' %}">Get Started</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">Home Remedies: What Works?</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">Various home treatments can help manage constipation, such as drinking more water and eating fiber.</h2>
+          <div data-aos="fade-up" data-aos-delay="800">
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left" data-aos-delay="200">
+          <img src=" https://www.bing.com/images/search?view=detailV2&ccid=ppOrsAVY&id=ED71DFD65AE4E01D98AD03DA153126CD0CB97D37&thid=OIP.ppOrsAVY5GJThPGhyGTK-gHaGN&mediaurl=https%3a%2f%2fwww.earthclinic.com%2fimages%2fpages%2ftop-10-home-remedies.jpg&exph=788&expw=940&q=home+remedies&simid=608038353082987186&FORM=IRPRST&ck=94FA5AD11075C2448E8701D33B7266D6&selectedIndex=7" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!-- End Hero -->
+
+  <!-- #main -->
+  <main id="main">
+
+     <!-- ======= Knowledge Section ======= -->
+     <section id="portfolio" class="portfolio">
+      <div class="container">
+        <div class="section-title">
+          <h2>Knowledge Is The Key To Wellness</h2>
+        </div>
+        
+       
+
+        <div class="row" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">Cough</li>
+              <li data-filter=".filter-card">Skin</li>
+              <li data-filter=".filter-web">migraine </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img style="width: 450px; height: 300px;" src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/home_remedies_slideshow/493ss_thinkstock_rf_wooden_spoon_shredded_ginger_root.jpg?resize=652px:*&output-quality=100" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Ginger</h4>
+                <p>It’s been used for thousands of years in Asian medicine to treat stomachaches, diarrhea, and nausea, and studies show that it works for nausea and vomiting. There’s some evidence that it might help with menstrual cramps, too. But it’s not necessarily good for everyone. Some people get tummy trouble, heartburn, diarrhea, and gas because of it, and it may affect how some medications work. So talk to your doctor, and use it with care.</p>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img  style="width: 450px; height: 300px;" src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/home_remedies_slideshow/493ss_thinkstock_rf_herbal_peppermint_and_oil.jpg?resize=652px:*&output-quality=100" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Peppermint</h4>
+                <p>Mint has been used for hundreds of years as a health remedy. Peppermint oil might help with irritable bowel syndrome -- a long-term condition that can cause cramps, bloating, gas, diarrhea, and constipation -- and it may be good for headaches as well. More studies are needed to see how much it helps and why. People use the leaf for other conditions, too, but there’s very little evidence it helps with any of them. </p>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img style="width: 450px; height: 300px;" src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/home_remedies_slideshow/493ss_thinkstock_rf_jar_of_raw_honey_and_comb.jpg?resize=652px:*&output-quality=100" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Honey</h4>
+                <p>This natural sweetener may work just as well for a cough as over-the-counter medicines. That could be especially helpful for children who aren’t old enough to take those. But don’t give it to an infant or a toddler younger than 1. There’s a small risk of a rare but serious kind of food poisoning that could be dangerous for them. And while you may have heard that “local” honey can help with allergies, studies don’t back that up.</p>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img style="width: 450px; height: 300px;" src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/home_remedies_slideshow/493ss_thinkstock_rf_woman_soaking_in_bathtub-1.jpg?resize=652px:*&output-quality=100" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Hot Bath</h4>
+                <p>It’s good for all kinds of things that affect your muscles, bones, and tendons (the tissues that connect your muscles to your bones), like arthritis, back pain, and joint pain. And warm water can help get blood flow to areas that need it, so gently stretch and work those areas while you’re in there. But don’t make it too hot, especially if you have a skin condition. The ideal temperature is between 92 and 100 F.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img style="width: 450px; height: 300px;" src="https://th.bing.com/th/id/R.1d4c3a56dfe936afbea32237752a227f?rik=SWxVSFTwnYkspg&riu=http%3a%2f%2fworldofsucculents.com%2fwp-content%2fuploads%2f2013%2f03%2fAloe-vera-2.jpg&ehk=0gAUMZ4KiRGB6dkHKr%2bqzivm7Q4jJUTMph6pE7JayCs%3d&risl=&pid=ImgRaw&r=0" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Aloe vera</h4>
+                <p>Aloe vera has healing properties and may stimulate new cell growth. It also soothes and moisturizes without clogging pores. Using aloe vera after you’ve washed your face each day may give your skin that healthy glow.
+
+                  It’s possible to be allergic to aloe vera. Test it first by rubbing a small amount on your forearm and if there’s no reaction in 24 hours, it should be safe to use.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img style="width: 450px; height: 300px;" src="https://1.bp.blogspot.com/-CYCAuHtXU5w/XHWbvhniyEI/AAAAAAAACJ4/V1mkQsvYq7k0BPyVRwSU399g6bJRgm9DgCLcBGAs/s1600/health-benefits-of-drinking-enough-water.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Drink more water</h4>
+                <p>Your skin is made up of cells that need water to function well. The connection to drinking water and having healthy skin is still ongoing, but at least one 2015 studyTrusted Source concluded there’s a strong link between drinking more water and having healthier skin.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img style="width: 450px; height: 300px;" src="https://th.bing.com/th/id/R.7c0c2af10d2303ff9e4fe153f5079e07?rik=mE7DBqgO7Nx0cA&riu=http%3a%2f%2f2.bp.blogspot.com%2f-P6TYDuyQ_Lg%2fTxajbry5wMI%2fAAAAAAAAA7s%2fo3QKc0kpz1M%2fs400%2f111019_DEADMAN_0547.jpg&ehk=X45mg7yx7Bcdf0TNV%2bLYm%2fht05nwa%2fPtl5WcqNsPvkI%3d&risl=&pid=ImgRaw&r=0" alt="">
+              <div class="portfolio-info">
+                <h4>Drink a cup of coffee</h4>
+                <p>Caffeine may help relieve your migraine symptoms to a certain degree. Plus, it facilitates better absorption of your migraine medication into the body so that it can deliver the best results.</p>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img style="width: 450px; height: 300px;" src="https://th.bing.com/th/id/OIP.hCsMAmM271ImKls8qiaUngHaE7?pid=ImgDet&rs=1" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Stress management</h4>
+                <p>Whenever possible, it is best to limit situations that can lead to stress. Finding outlets such as journaling, exercise, and meditation may help. Other stress relief strategies might include taking a warm bath, listening to music, or practicing breathing techniques. Some people find stress management classes helpful.</p>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img style="width: 450px; height: 300px;" src="https://th.bing.com/th/id/OIP.F00CpEjSwfnfPymU9T6f5gHaE8?pid=ImgDet&rs=1" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Apply lavender oil</h4>
+                <p>Inhaling lavender essential oil may ease migraine pain. Lavender oil may be inhaled directly or diluted with a carrier oil and applied in small amounts to your temples.</p>
+                
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+   
+  </main>
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <div class="col-lg-6 text-lg-left text-center">
+          <div class="copyright">
+            &copy; Copyright <strong>Vesperr</strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/vesperr-free-bootstrap-template/ -->
+            Designed by <a href=" {% static  'https://bootstrapmade.com/' %}">BootstrapMade</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+            <a href=" {% static  '#intro' %}" class="scrollto">Home</a>
+            <a href=" {% static  '#about' %}"class="scrollto">About</a>
+            <a href=" {% static  '#' %}">Privacy Policy</a>
+            <a href=" {% static  '#' %}">Terms of Use</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href=" {% static  '#' %}" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
