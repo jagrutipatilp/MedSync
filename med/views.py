@@ -9,8 +9,6 @@ from django.shortcuts import redirect, render
 from django import forms
 import requests
 from django.http import JsonResponse
-from bs4 import BeautifulSoup
-from .scraping import scrape_data
 
 from django.shortcuts import render
 import requests
