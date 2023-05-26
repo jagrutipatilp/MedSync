@@ -99,25 +99,13 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
-        
+
       <div class="logo' %}">
         <h1><a href=" {% static  'index' %}">Med-Sync</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
-        <a href=" {% static  'index' %}"></a>
+        <!-- <a href=" {% static  'index' %}"><img src="assets/img/logo.png' %}" alt="" class="img-fluid"></a>-->
       </div>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-  <a class="navbar-brand" href="#">Navbar</a>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-
-    <span class="navbar-toggler-icon"></span>
-
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-   
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="{% url 'home' %}">Home</a></li>
@@ -130,8 +118,7 @@
           <li><a class="getstarted scrollto" href=" {% url  'login.html' %}">Get Started</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </div>
-     </nav><!-- .navbar -->
+      </nav><!-- .navbar -->
 
     </div>
   </header><!-- End Header -->
