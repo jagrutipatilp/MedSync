@@ -354,8 +354,8 @@ body {
   --------------------------------------------------------------*/
   #hero {
     width: 100%;
-    margin-top: 80px;
-    padding-top:80px;
+    /* height: 70vh; */
+    margin-top: 70px;
   }
   
   #hero h1 {
@@ -402,6 +402,7 @@ body {
   
   @media (max-width: 991px) {
     #hero {
+      height: 100vh;
     }
   
     #hero .animated {
@@ -437,15 +438,7 @@ body {
       width: 70%;
     }
   }
-  #health-tip {
-  max-width: 1200px; /* Set the maximum width of the container as per your requirements */
-  margin: 0 auto; /* Center the container horizontally */
-}
-
-.hero-img {
-  display: flex;
-  align-items: center; /* Align the image vertically in the container */
-}
+  
   @media (max-width: 575px) {
     #hero .hero-img img {
       width: 80%;
