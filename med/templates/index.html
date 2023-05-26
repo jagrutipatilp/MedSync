@@ -99,22 +99,16 @@
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <div class="logo' %}">
-        <h1><a href=" {% static  'index' %}">Med-Sync</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href=" {% static  'index' %}"><img src="assets/img/logo.png' %}" alt="" class="img-fluid"></a>-->
-      </div>
+      <h1 class="logo"><a href="index.html">MedSync</a></h1>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto  active" href="{% url 'home' %}">Home</a></li>
-          <li><a class="nav-link scrollto" href="{% url 'about_page.html' %}">About</a></li>
-
-          
-          <li><a class="nav-link scrollto" href=" {% url  'newsevents.html' %}">News & events</a></li>
-          <li><a class="nav-link scrollto " href=" {% url  'remedies.html' %}">Remedies</a></li>
-          <li><a class="nav-link scrollto" href=" {% url  'contactus.html' %}">Contact</a></li>
-          <li><a class="getstarted scrollto" href=" {% url  'login.html' %}">Get Started</a></li>
+          <li><a class="nav-link active" href="#hero">Home</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#services">Services</a></li>
+          <li><a class="nav-link" href="#departments">Departments</a></li>
+          <li><a class="nav-link" href="#doctors">Doctors</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -122,21 +116,19 @@
     </div>
   </header><!-- End Header -->
 
-
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
-    
-    <div class="container" id="health-tip">
+
+    <div class="container">
       <div class="row">
-        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-          <h1 data-aos="fade-up" id="tip-heading"></h1>
-          <h2 data-aos="fade-up" id="tip-description" data-aos-delay="400"></h2>
-          <div data-aos="fade-up" data-aos-delay="800">
-            <a href=" {% static  '#about'%}" class="btn-get-started scrollto">Read More</a>
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">Welcome to MedSync</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">Your health is our priority</h2>
+          <div data-aos="fade-up" data-aos-delay="600">
+            <div class="text-center text-lg-start">
+              <a href="#about" class="btn-get-started scrollto">Get Started</a>
+            </div>
           </div>
-        </div>
-        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left" data-aos-delay="200">
-          <img href="" id="tip-image"  class="img-fluid animated" >
         </div>
       </div>
     </div>
