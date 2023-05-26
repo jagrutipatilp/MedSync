@@ -354,8 +354,8 @@ body {
   --------------------------------------------------------------*/
   #hero {
     width: 100%;
-    height: auto;
-    margin-top: 70px;
+    margin-top: 80px;
+    padding-top:80px;
   }
   
   #hero h1 {
