@@ -78,12 +78,10 @@ def home(request):
 
     # Set the interval (in seconds) between displaying each health tip
     interval = 5
-    scraped_data = scrape_data()
 
     context = {
         'tips': tips,
         'interval': interval,
-        'scraped_data': scraped_data,
         }
     return render(request, "index.html",context)
 
