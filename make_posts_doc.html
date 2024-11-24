@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Home - Brand</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.reflowhq.com/v2/toolkit.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
     <link rel="stylesheet" href="assets/css/bs-theme-overrides.css">
     <link rel="stylesheet" href="assets/css/Login-Form-Basic-icons.css">
@@ -23,42 +22,38 @@
                     <li class="nav-item"><a class="nav-link" href="index_doc.html" style="color: var(--bs-primary-text-emphasis);">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="posts_doc.html" style="color: var(--bs-primary-text-emphasis);">Posts</a></li>
                     <li class="nav-item"><a class="nav-link" href="ai_doc.html">AI</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="patients.html">Patients</a></li>
+                    <li class="nav-item"><a class="nav-link" href="patients.html">Patients</a></li>
                     <li class="nav-item"><a class="nav-link" href="appointments.html">Appointments</a></li>
                 </ul><a class="btn btn-primary shadow" role="button" href="signup.html">Sign up</a>
             </div>
         </div>
     </nav>
-    <section>
+    <section class="py-5">
         <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div data-reflow-type="product-search" data-reflow-placeholder="Search Patient "></div>
+            <div class="row mb-5">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <h1 style="color: var(--bs-primary);"><strong>Make post</strong></h1>
                 </div>
             </div>
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <div class="row">
-                        <div class="col-auto">
-                            <picture><img class="rounded-circle" src="assets/img/acc.png" width="60px"></picture>
-                        </div>
-                        <div class="col">
-                            <h5 style="font-weight: bold;">Jagruti Patil</h5>
-                            <p>My Notes About Him</p>
-                        </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6 col-xl-4">
+                    <div>
+                        <form class="p-3 p-xl-4" method="post" data-bs-theme="light">
+                            <div class="row gy-1 row-cols-1 text-center justify-content-start align-items-start" style="padding: 9px;">
+                                <div class="col text-center align-self-center m-auto"><img id="previewImage" class="img-thumbnail" src="assets/img/addimg.jpg" width="106" height="106"></div>
+                                <div class="col text-center d-flex d-md-flex d-lg-flex justify-content-center align-self-center mx-auto justify-content-md-center justify-content-lg-center"><input class="form-control form-control-sm" type="file" id="imageUploader" accept="image/*" style="width: 110px;"></div>
+                            </div>
+                            <div class="mb-3"><input class="form-control" type="text" id="name-1" name="name" placeholder="Title"></div>
+                            <div class="mb-3"></div>
+                            <div class="mb-3"><textarea class="form-control" id="message-1" name="message" rows="6" placeholder="Discription"></textarea></div>
+                            <div><button class="btn btn-primary shadow d-block w-100" type="submit">POST</button></div>
+                        </form>
                     </div>
-                    <div class="row justify-content-center">
-                        <div class="col-auto"><button class="btn btn-primary" type="button">Dashboard</button></div>
-                        <div class="col-auto"><button class="btn btn-primary" type="button">Assign Visit</button></div>
-                        <div class="col-auto"><button class="btn btn-primary" type="button">Consult</button></div>
-                        <div class="col-auto"><button class="btn btn-primary" type="button">Approve Appointment</button></div>
-                    </div>
-                </li>
-            </ul>
+                </div>
+            </div>
         </div>
     </section>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://cdn.reflowhq.com/v2/toolkit.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/bold-and-bright.js"></script>

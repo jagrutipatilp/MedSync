@@ -4,64 +4,20 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>AI GUI</title>
+    <title>MedSync</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/bs-theme-overrides.css">
     <link rel="stylesheet" href="assets/css/Login-Form-Basic-icons.css">
     <link rel="stylesheet" href="assets/css/Multi-step-form.css">
     <link rel="stylesheet" href="assets/css/Pricing-Duo-badges.css">
+    <link rel="stylesheet" href="assets/css/Floating-Button.css">
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-        <div class="container-fluid"><a class="navbar-brand" href="#">AI Assistant</a><button data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler" type="button"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div class="container mt-5">
-        <div class="text-center mb-4">
-            <h1 class="fw-bold">Welcome to Your AI Assistant</h1>
-            <p class="lead">Interact with the AI to get personalized recommendations.</p>
-        </div>
-        <div class="card shadow-sm mb-4">
-            <div class="card-header text-white bg-primary">
-                <h5>Enter Details for AI Recommendation</h5>
-            </div>
-            <div class="card-body">
-                <form id="ai-form">
-                    <div class="mb-3"><label class="form-label" for="inputText">Enter Query</label><input class="form-control form-control" type="text" id="inputText" placeholder="Type your question here..."></div><button class="btn btn-primary w-100" type="submit">Get Recommendation</button>
-                </form>
-            </div>
-        </div>
-        <div class="card shadow-sm">
-            <div class="card-header text-white bg-success">
-                <h5>AI Results</h5>
-            </div>
-            <div class="card-body">
-                <p class="text-muted" id="resultText">Results will appear here...</p>
-            </div>
-        </div>
-    </div><script>
-    document.getElementById("ai-form").addEventListener("submit", function(event) {
-        event.preventDefault();
-        const input = document.getElementById("inputText").value;
-        if (input) {
-            document.getElementById("resultText").textContent = "AI is analyzing your input: " + input;
-            // Simulate AI Response
-            setTimeout(() => {
-                document.getElementById("resultText").textContent = "Recommended Action: Stay hydrated and exercise regularly!";
-            }, 2000);
-        } else {
-            document.ge
-</script>
+<body><a class="float" href="#"><i class="fa fa-pencil-square my-float" style="color:rgb(255,255,255);"></i></a>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/bold-and-bright.js"></script>
     <script src="assets/js/Input-Image-With-Preview-input_image_preview.js"></script>

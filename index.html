@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="assets/css/Login-Form-Basic-icons.css">
     <link rel="stylesheet" href="assets/css/Multi-step-form.css">
     <link rel="stylesheet" href="assets/css/Pricing-Duo-badges.css">
+    <link rel="stylesheet" href="assets/css/Floating-Button.css">
 </head>
 
 <body>
     <nav class="navbar navbar-expand-md sticky-top navbar-shrink py-3" id="mainNav">
-        <div class="container"><a class="navbar-brand d-flex align-items-center" href="/"><span style="color: var(--bs-primary-text-emphasis);">Med-Sync</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="/"><span style="color: var(--bs-primary-text-emphasis);">Med-Sync</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#nav_main"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="nav_main">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html" style="color: var(--bs-primary-text-emphasis);">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="posts.html" style="color: var(--bs-primary-text-emphasis);">Posts</a></li>
@@ -28,10 +29,10 @@
         </div>
     </nav>
     <header class="bg-primary-gradient">
-        <div class="container-fluid pt-4" style="padding-top: 0px;">
-            <section class="text-white py-4" style="padding-top: 0px;">
+        <div class="container-fluid" style="padding-top: 0px;">
+            <section class="text-white">
                 <div class="container">
-                    <div class="border rounded border-0 d-flex flex-column justify-content-center align-items-center p-4 py-5" style="background: linear-gradient(rgba(0,240,255,0.2), rgba(0,123,255,0.2)), url(&quot;assets/img/3.jpeg&quot;) center / cover;height: 500px;">
+                    <div class="border rounded border-0 d-flex flex-column justify-content-center align-items-center p-4" style="background: linear-gradient(rgba(0,240,255,0.2), rgba(0,123,255,0.2)), url(&quot;assets/img/3.jpeg&quot;) center / cover;height: 500px;">
                         <div class="row">
                             <div class="col-md-10 col-xl-8 text-center d-flex d-sm-flex d-md-flex justify-content-center align-items-center mx-auto justify-content-md-start align-items-md-center justify-content-xl-center">
                                 <div>
@@ -58,12 +59,12 @@
                     <div class="col mb-5">
                         <div class="card shadow-sm">
                             <div class="card-body px-4 py-5 px-md-5">
+                                <h5 class="fw-bold card-title">24/7 AI Health Monitoring</h5>
+                                <p class="text-muted card-text mb-4">Talk to our intelligent AI for daily health check-ins, monitor your vitals, and get real-time insights to keep your wellness on track every day.</p>
                                 <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-robot text-success">
                                         <path d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5M3 8.062C3 6.76 4.235 5.765 5.53 5.886a26.58 26.58 0 0 0 4.94 0C11.765 5.765 13 6.76 13 8.062v1.157a.933.933 0 0 1-.765.935c-.845.147-2.34.346-4.235.346-1.895 0-3.39-.2-4.235-.346A.933.933 0 0 1 3 9.219zm4.542-.827a.25.25 0 0 0-.217.068l-.92.9a24.767 24.767 0 0 1-1.871-.183.25.25 0 0 0-.068.495c.55.076 1.232.149 2.02.193a.25.25 0 0 0 .189-.071l.754-.736.847 1.71a.25.25 0 0 0 .404.062l.932-.97a25.286 25.286 0 0 0 1.922-.188.25.25 0 0 0-.068-.495c-.538.074-1.207.145-1.98.189a.25.25 0 0 0-.166.076l-.754.785-.842-1.7a.25.25 0 0 0-.182-.135Z"></path>
                                         <path d="M8.5 1.866a1 1 0 1 0-1 0V3h-2A4.5 4.5 0 0 0 1 7.5V8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1v-.5A4.5 4.5 0 0 0 10.5 3h-2zM14 7.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.5A3.5 3.5 0 0 1 5.5 4h5A3.5 3.5 0 0 1 14 7.5"></path>
                                     </svg></div>
-                                <h5 class="fw-bold card-title">24/7 AI Health Monitoring</h5>
-                                <p class="text-muted card-text mb-4">Talk to our intelligent AI for daily health check-ins, monitor your vitals, and get real-time insights to keep your wellness on track every day.</p>
                             </div>
                         </div>
                     </div>
@@ -184,6 +185,7 @@
     </section>
     <footer class="bg-primary-gradient"></footer>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/bold-and-bright.js"></script>
     <script src="assets/js/Input-Image-With-Preview-input_image_preview.js"></script>
